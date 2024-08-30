@@ -5,7 +5,7 @@ import { MdMessage } from "react-icons/md";
 import { CiBoxes } from "react-icons/ci";
 import { FaUsers } from "react-icons/fa6";
 import { FaUserCircle } from "react-icons/fa";
-
+import { IoIosMail } from "react-icons/io";
 function Sidebar() {
   return (
     <>
@@ -17,10 +17,10 @@ function Sidebar() {
         <title>-</title>
     </head>
     <body>
-    <div className=' h-screen w-64 bg-slate-900 text-white flex flex-col  items-center'>
+    <div className=' h-screen w-64     bg-black text-white flex flex-col  items-center'>
         <div className=' m-4 flex flex-col justify-center'>
-            <FaUserCircle className='text-7xl content-center'/>
-            <h1 className=' text-2xl'>Admin</h1>
+        <img src="logo2.png" class="h-10" alt="Flowbite Logo" />
+            <h1 className=' text-1xl'>Admin</h1>
         </div>
         <div className='flex flex-col justify-center items-center '>
             <menu className=' w-64 p-2 text-1xl'>
@@ -38,15 +38,15 @@ function Sidebar() {
                 </div>
                 <div className='flex items-center duration-500 hover:text-white hover:bg-red-300 m-2 mr-2  border-spacing-3 space-x-2 p-4 justify-right rounded-sm text-blue-950 bg-white'>
                     <i className=''><MdMessage /></i>
-                    <h2>Attandes</h2>
+                    <a href="/Employ_attandes"><h2>Attandes</h2></a>
+                </div>
+                <div className='flex items-center duration-500 hover:text-white hover:bg-red-300 m-2 mr-2 border-spacing-3 space-x-2 p-4 justify-right rounded-sm text-blue-950 bg-white'>
+                    <i className=''><IoIosMail /></i>
+                    <a href="/Mail"><h2>Mail</h2></a>
                 </div>
                 <div className='flex items-center duration-500 hover:text-white hover:bg-red-300 m-2 mr-2 border-spacing-3 space-x-2 p-4 justify-right rounded-sm text-blue-950 bg-white'>
                     <i className=''><CiBoxes /></i>
-                    <h2>Orders</h2>
-                </div>
-                <div className='flex items-center duration-500 hover:text-white hover:bg-red-300 m-2 mr-2 border-spacing-3 space-x-2 p-4 justify-right rounded-sm text-blue-950 bg-white'>
-                    <i className=''><CiBoxes /></i>
-                    <h2>Orders</h2>
+                    <a href="/Slip_table"><h2>Orders</h2></a>
                 </div>
                 
             </menu>

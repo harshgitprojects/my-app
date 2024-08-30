@@ -1,34 +1,35 @@
 import React from 'react'
 import Nave from './Nave'
-import { Card } from "flowbite-react";
-import { Button } from "flowbite-react";
+import { FaRegFilePdf } from "react-icons/fa";
+
+
+
 function Home() {
   return (
-    <div className='w-screen h-auto bg-slate-800'>
+    <div className=' w-screen  items-center  overflow-hidden h-screen bg-white'>
     <Nave/>
-    <div className=' flex'>
-    <Card className=" h-64 w-1/3 p-5 m-5" imgSrc="https://marketplace.canva.com/EAFXqL8NfTQ/1/0/1131w/canva-black-%26-orange-a4-professional-invoice-ZAbveYe41E8.jpg" horizontal>
-      <h5 className="text-2xl font-bold m-1 tracking-tight text-gray-900 dark:text-white">
-        Create Sallry Slip
-      </h5>
-      <p className="font-normal text-gray-700 dark:text-gray-400">
-        Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-      </p>
-     <button className='bg-black mt-3 text-white rounded-md h-8 w-1/3'>Create</button>
-    </Card>
-    <Card className=" h-64 w-1/3 p-5 m-5" imgSrc="https://assets.visme.co/templates/banners/thumbnails/i_Management-Job-Offer-Letter_full.jpg" horizontal>
-      <h5 className="text-2xl font-bold m-1 tracking-tight text-gray-900 dark:text-white">
-        Create offer letter
-      </h5>
-      <p className="font-normal text-gray-700 dark:text-gray-400">
-        Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-      </p>    
-       <a href="/Offer_latter"><button className='bg-black mt-3 text-white rounded-md h-8 w-1/3'>Create</button></a>
-    </Card>
-    
+    <div className=' container flex h-screen flex-shrink '>
+        <div className='flex flex-col items-center justify-center p-1 shadow-2xl text-black h-52 w-80 bg-white m-5'>
+            <h1 className='text-2xl'>Create a Salary-Slip</h1>
+            <a href="/Slip">
+            <button className='h-10 p-2 m-2 border-b-white  bottom-5 right-10 w-40 flex items-center bg-black text-white'><FaRegFilePdf className='m-1 text-2xl text-red-500' />Salary-Slip PDF</button>
+            </a>
+        </div>
+        <div className='flex flex-col items-center justify-center p-1 shadow-2xl text-black h-52 w-80 bg-white m-5'>
+            <h1 className='text-2xl'>Create a Offer Latter</h1>
+            <a href="/Offer_latter">
+            <button className='h-10 p-2 m-2 border-b-white  bottom-5 right-10 w-40 flex items-center bg-black text-white'><FaRegFilePdf className='m-1 text-2xl text-red-500' />Offer latter PDF</button>
+            </a>
+        </div>
+        <div className='flex flex-col items-center justify-center p-1 shadow-2xl text-black h-52 w-80 bg-white m-5'>
+            <h1 className='text-2xl'>Create a Offer Latter</h1>
+            <a href="/Salary_slip">
+            <button className='h-10 p-2 m-2 border-b-white  bottom-5 right-10 w-40 flex items-center bg-black text-white'><FaRegFilePdf className='m-1 text-2xl text-red-500' />Offer latter PDF</button>
+            </a>
+        </div>
     </div>
-    
     </div>
+
   )
 }
 
