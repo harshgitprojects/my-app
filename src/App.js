@@ -1,23 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import Sidebar from './component/Sidebar';
+import Home from './component/Home';
+import Addemploy from './component/deshbordComponent/Addemploy';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Employ_desh from './component/deshbordComponent/Employ_desh';
+import Offer_latter_create_from from './component/deshbordComponent/Offer_latter_create_from';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=" flex">
+      <Sidebar/>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />}></Route>
+      <Route index element={<Home />} /> 
+      <Route path="/Employ_desh" element={<Employ_desh />} />
+      <Route path="/addemploy" element={<Addemploy />} />
+      <Route path="/Offer_latter" element={<Offer_latter_create_from />} />
+      
+        {/* <Route path="*" element={<NoPage />} /> */}
+      
+    </Routes>
+    </BrowserRouter>
+     
     </div>
   );
 }
